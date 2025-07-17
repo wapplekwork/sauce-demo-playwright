@@ -1,6 +1,6 @@
-// tests/login.spec.js
 const { test, expect } = require('@playwright/test');
-const { LoginPage, InventoryPage } = require('../pages/LoginPage');
+const { LoginPage } = require('../pages/LoginPage');
+const { InventoryPage } = require('../pages/InventoryPage');
 const { testUsers } = require('../utils/testData');
 
 test.describe('Login Functionality', () => {

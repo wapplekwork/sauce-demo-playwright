@@ -1,6 +1,7 @@
-// tests/shopping.spec.js
 const { test, expect } = require('@playwright/test');
-const { LoginPage, InventoryPage, CartPage } = require('../pages/LoginPage');
+const { LoginPage} = require('../pages/LoginPage');
+const { InventoryPage } = require('../pages/InventoryPage');
+const { CartPage } = require('../pages/CartPage');
 const { testUsers, testProducts } = require('../utils/testData');
 
 test.describe('Shopping Cart Functionality', () => {

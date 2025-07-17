@@ -1,4 +1,3 @@
-// tests/api.spec.js
 const { test, expect } = require('@playwright/test');
 
 test.describe('API Testing', () => {
@@ -22,12 +21,6 @@ test.describe('API Testing', () => {
     expect(response.status()).toBe(404);
   });
 
-  // test('should verify static assets load correctly', async ({ request }) => {
-  //   // Test if CSS loads correctly
-  //   const cssResponse = await request.get('https://www.saucedemo.com/static/media/swag.woff2');
-  //   expect(cssResponse.status()).toBe(200);
-  //   expect(cssResponse.headers()['content-type']).toContain('font/woff2');
-  // });
 
   test('should test response time', async ({ request }) => {
     const startTime = Date.now();
