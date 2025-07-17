@@ -1,0 +1,52 @@
+<testsuites id="" name="" tests="20" failures="0" skipped="0" errors="0" time="14.848184">
+<testsuite name="api.spec.js" timestamp="2025-07-17T06:18:03.977Z" hostname="chromium" tests="5" failures="0" skipped="0" time="0.171" errors="0">
+<testcase name="API Testing › should check website accessibility" classname="api.spec.js" time="0.101">
+</testcase>
+<testcase name="API Testing › should verify response headers" classname="api.spec.js" time="0.019">
+</testcase>
+<testcase name="API Testing › should handle non-existent endpoints" classname="api.spec.js" time="0.025">
+</testcase>
+<testcase name="API Testing › should test response time" classname="api.spec.js" time="0.017">
+<system-out>
+<![CDATA[Response time: 12ms
+]]>
+</system-out>
+</testcase>
+<testcase name="API Testing › should verify page content" classname="api.spec.js" time="0.009">
+</testcase>
+</testsuite>
+<testsuite name="login.spec.js" timestamp="2025-07-17T06:18:03.977Z" hostname="chromium" tests="8" failures="0" skipped="0" time="5.923" errors="0">
+<testcase name="Login Functionality › should display login page correctly" classname="login.spec.js" time="0.634">
+</testcase>
+<testcase name="Login Functionality › should login successfully with valid credentials" classname="login.spec.js" time="0.686">
+</testcase>
+<testcase name="Login Functionality › should show error for locked out user" classname="login.spec.js" time="0.606">
+</testcase>
+<testcase name="Login Functionality › Invalid Login Attempts › should show error for Invalid username" classname="login.spec.js" time="0.574">
+</testcase>
+<testcase name="Login Functionality › Invalid Login Attempts › should show error for Invalid password" classname="login.spec.js" time="0.579">
+</testcase>
+<testcase name="Login Functionality › Invalid Login Attempts › should show error for Empty username" classname="login.spec.js" time="0.563">
+</testcase>
+<testcase name="Login Functionality › Invalid Login Attempts › should show error for Empty password" classname="login.spec.js" time="0.589">
+</testcase>
+<testcase name="Login Functionality › should logout successfully" classname="login.spec.js" time="1.692">
+</testcase>
+</testsuite>
+<testsuite name="shopping.spec.js" timestamp="2025-07-17T06:18:03.977Z" hostname="chromium" tests="7" failures="0" skipped="0" time="5.088" errors="0">
+<testcase name="Shopping Cart Functionality › should display all inventory items" classname="shopping.spec.js" time="0.649">
+</testcase>
+<testcase name="Shopping Cart Functionality › should add item to cart" classname="shopping.spec.js" time="0.691">
+</testcase>
+<testcase name="Shopping Cart Functionality › should add multiple items to cart" classname="shopping.spec.js" time="0.696">
+</testcase>
+<testcase name="Shopping Cart Functionality › should view cart with added items" classname="shopping.spec.js" time="0.709">
+</testcase>
+<testcase name="Shopping Cart Functionality › should remove item from cart" classname="shopping.spec.js" time="0.761">
+</testcase>
+<testcase name="Shopping Cart Functionality › should continue shopping from cart" classname="shopping.spec.js" time="0.803">
+</testcase>
+<testcase name="Shopping Cart Functionality › should proceed to checkout" classname="shopping.spec.js" time="0.779">
+</testcase>
+</testsuite>
+</testsuites>
