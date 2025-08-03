@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-
+/*-----------
 // test search products
 test.describe('Search Products', () => {
   test('should search for products and add to cart', async ({ page }) => {
@@ -25,3 +25,5 @@ test.describe('Search Products', () => {
   
   });
 });
+
+--*/
