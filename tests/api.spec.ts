@@ -72,4 +72,16 @@ test.describe('API Testing', () => {
     expect(body).toHaveProperty('title', 'abc');
     expect(body).toHaveProperty('body', 'test');
   });
+
+  // mock API response
+  test('should mock API response', async ({ page }) => {
+    await page.route('**/api/products', async (route) => {
+      route.fulfill({
+        status: 200,
+        body: JSON.stringify({ message: 'Mocked API response' }),
+      });
+    });
+    // You can add navigation or API call here to test the mocked route
+    // await page.goto('https://www.saucedemo.com');
+  });
 });
