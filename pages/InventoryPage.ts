@@ -1,5 +1,16 @@
-class InventoryPage {
-  constructor(page) {
+import { Page, Locator } from '@playwright/test';
+
+export class InventoryPage {
+  page: Page;
+  inventoryContainer: Locator;
+  inventoryItems: Locator
+  addToCartButtons: Locator;
+  shoppingCartBadge: Locator;
+  shoppingCartLink: Locator;
+  menuButton: Locator;
+  logoutLink: Locator;
+
+  constructor(page: Page) {
     this.page = page;
     this.inventoryContainer = page.locator('[data-test="inventory-container"]');
     this.inventoryItems = page.locator('[data-test="inventory-item"]');
@@ -41,4 +52,4 @@ class InventoryPage {
   }
 }
 
-module.exports = { InventoryPage};
+module.exports = { InventoryPage };

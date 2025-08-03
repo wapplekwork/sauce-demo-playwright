@@ -1,5 +1,14 @@
-class CartPage {
-  constructor(page) {
+import { Page, Locator } from '@playwright/test';
+
+export class CartPage {
+  page: Page;
+  cartList: Locator;
+  cartItems: Locator;
+  checkoutButton: Locator;
+  continueShoppingButton: Locator;
+  removeButtons: Locator;
+
+  constructor(page: Page) {
     this.page = page;
     this.cartList = page.locator('[data-test="cart-list"]');
     this.cartItems = page.locator('[data-test="item-quantity"]');

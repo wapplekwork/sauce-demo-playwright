@@ -1,5 +1,6 @@
 // utils/testData.js
-const testUsers = {
+
+export const testUsers = {
   validUsers: [
     {
       username: 'standard_user',
@@ -46,7 +47,7 @@ const testUsers = {
   ]
 };
 
-const testProducts = [
+export const testProducts = [
   {
     name: 'Sauce Labs Backpack',
     price: '$29.99',
@@ -64,7 +65,7 @@ const testProducts = [
   }
 ];
 
-const checkoutData = {
+export const checkoutData = {
   validCustomer: {
     firstName: 'John',
     lastName: 'Doe',
@@ -77,8 +78,8 @@ const checkoutData = {
   }
 };
 
-module.exports = {
-  testUsers,
-  testProducts,
-  checkoutData
-};
+// module.exports = {
+//   testUsers,
+//   testProducts,
+//   checkoutData
+// };

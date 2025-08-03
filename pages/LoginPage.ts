@@ -1,5 +1,18 @@
-class LoginPage {
-  constructor(page) {
+import { Page, Locator } from '@playwright/test';
+import { BASE_URL } from  '../utils/config';   
+
+// step 1: Define the LoginPage class
+export class LoginPage {
+  // step 2: Declare properties for locators
+  page: Page;  
+  usernameInput: Locator;
+  passwordInput: Locator;
+  loginButton: Locator;
+  errorMessage: Locator;
+  loginLogo: Locator;
+
+  // step 3: Initialize the properties in the constructor
+  constructor(page: Page) {
     this.page = page;
     this.usernameInput = page.locator('[data-test="username"]');
     this.passwordInput = page.locator('[data-test="password"]');
@@ -9,7 +22,7 @@ class LoginPage {
   }
 
   async goto() {
-    await this.page.goto('/');
+    await this.page.goto(BASE_URL);
   }
 
   async login(username, password) {
@@ -20,6 +33,7 @@ class LoginPage {
 
   async getErrorMessage() {
     return await this.errorMessage.textContent();
+   //  await this.page.locator('[data-test="error"]').waitFor({ state: 'visible' });
   }
 
   async isLoginPageDisplayed() {
