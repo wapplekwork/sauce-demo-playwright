@@ -28,3 +28,18 @@ npx playwright test user-flows --debug
 
 # HTML Test Reports
 npx playwright show-report
+
+# วิธีติดตั้งและตั้งค่า Allure Report สำหรับ Playwright project 
+1. ติดตั้ง dependencies ที่จำเป็น:
+- npm install -D allure-playwright
+2. ติดตั้ง Allure Command Line Tool:
+- npm install -g allure-commandline
+
+3. วิธีการใช้งาน Allure Report:
+- npm run test:report
+
+ รันเฉพาะ test file และสร้าง report:
+- npx playwright test tests/login.spec.ts && npx allure generate allure-results --clean && npx allure open allure-report
+
+ ล้าง report เก่า 
+ - npm run allure:clear

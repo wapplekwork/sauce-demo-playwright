@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "sauce-demo-playwright",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright test && npx allure generate allure-results --clean && npx allure open",
+    "allure:clear": "rm -rf allure-results allure-report",
+    "allure:generate": "npx allure generate allure-results --clean",
+    "allure:open": "npx allure open allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.1.0",
+    "allure-playwright": "^3.3.2",
     "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.2.2",
