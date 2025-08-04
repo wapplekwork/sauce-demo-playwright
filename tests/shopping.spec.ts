@@ -4,7 +4,7 @@ import { InventoryPage } from '../pages/InventoryPage';
 import { CartPage } from '../pages/CartPage';
 import { testUsers, testProducts } from '../utils/testData';
 
-test.describe('Shopping Cart Functionality', () => {
+test.describe('1 -Shopping Cart Functionality', () => {
   let loginPage: LoginPage;
   let inventoryPage: InventoryPage;
   let cartPage: CartPage;
@@ -20,25 +20,25 @@ test.describe('Shopping Cart Functionality', () => {
     await expect(inventoryPage.isInventoryPageDisplayed()).toBeTruthy();
   });
 
-  test('should display all inventory items', async ({ page }: { page: Page }) => {
+  test('1.1 -should display all inventory items', async ({ page }: { page: Page }) => {
     const itemsCount = await inventoryPage.getInventoryItemsCount();
     expect(itemsCount).toBeGreaterThan(0);
   });
 
-  test('should add item to cart', async ({ page }: { page: Page }) => {
+  test('1.2 - should add item to cart', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     const cartBadgeCount = await inventoryPage.getCartBadgeCount();
     expect(cartBadgeCount).toBe('1');
   });
 
-  test('should add multiple items to cart', async ({ page }: { page: Page }) => {
+  test('1.3 - should add multiple items to cart', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     await inventoryPage.addItemToCartByName('sauce-labs-bike-light');
     const cartBadgeCount = await inventoryPage.getCartBadgeCount();
     expect(cartBadgeCount).toBe('2');
   });
 
-  test('should view cart with added items', async ({ page }: { page: Page }) => {
+  test('1.4 -should view cart with added items', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     await inventoryPage.goToCart();
     await expect(cartPage.isCartPageDisplayed()).toBeTruthy();
@@ -46,7 +46,7 @@ test.describe('Shopping Cart Functionality', () => {
     expect(cartItemsCount).toBe(1);
   });
 
-  test('should remove item from cart', async ({ page }: { page: Page }) => {
+  test('1.5 should remove item from cart', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     await inventoryPage.goToCart();
     await cartPage.removeFirstItem();
@@ -54,14 +54,14 @@ test.describe('Shopping Cart Functionality', () => {
     expect(cartItemsCount).toBe(0);
   });
 
-  test('should continue shopping from cart', async ({ page }: { page: Page }) => {
+  test('1.6 -should continue shopping from cart', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     await inventoryPage.goToCart();
     await cartPage.continueShopping();
     await expect(inventoryPage.isInventoryPageDisplayed()).toBeTruthy();
   });
 
-  test('should proceed to checkout', async ({ page }: { page: Page }) => {
+  test('1.7 - should proceed to checkout', async ({ page }: { page: Page }) => {
     await inventoryPage.addFirstItemToCart();
     await inventoryPage.goToCart();
     await cartPage.proceedToCheckout();
