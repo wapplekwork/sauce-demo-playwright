@@ -1,10 +1,10 @@
 import { Page, Locator } from '@playwright/test';
-import { BASE_URL } from  '../utils/config';   
+import { BASE_URL } from '../utils/config';
 
 // step 1: Define the LoginPage class
 export class LoginPage {
   // step 2: Declare properties for locators
-  page: Page;  
+  page: Page;
   usernameInput: Locator;
   passwordInput: Locator;
   loginButton: Locator;
@@ -23,6 +23,8 @@ export class LoginPage {
 
   async goto() {
     await this.page.goto(BASE_URL);
+    // รอคอยให้หน้าเว็บโหลดเสร็จ
+    await this.page.waitForLoadState('networkidle');
   }
 
   async login(username: string, password: string) {
@@ -33,7 +35,7 @@ export class LoginPage {
 
   async getErrorMessage() {
     return await this.errorMessage.textContent();
-   //  await this.page.locator('[data-test="error"]').waitFor({ state: 'visible' });
+    //  await this.page.locator('[data-test="error"]').waitFor({ state: 'visible' });
   }
 
   async isLoginPageDisplayed() {

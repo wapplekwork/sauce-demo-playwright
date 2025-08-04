@@ -27,7 +27,8 @@ npx playwright test user-flows --debug
 - npx playwright test --ui
 - npx playwright test tests/login.spec.ts
 - npx playwright test tests/shopping.spec.ts
-
+- npx playwright test tests/api.spec.ts
+- npx playwright test tests/login.spec.ts && npx playwright test tests/shopping.spec.ts && npx playwright test tests/api.spec.ts
 
 # HTML Test Reports
 npx playwright show-report
