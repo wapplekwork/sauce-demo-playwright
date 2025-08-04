@@ -91,6 +91,7 @@ npx allure generate ./allure-results --clean && npx allure open allure-report
 npx playwright test && npx allure generate ./allure-results --clean && npx allure open allure-report
 
 # รันเฉพาะ login test พร้อม generate report
+npx playwright test tests && npx allure generate ./allure-results --clean && npx allure open allure-report
 npx playwright test tests/login.spec.ts && npx allure generate ./allure-results --clean && npx allure open allure-report
 ```
 
@@ -131,7 +132,10 @@ rm -rf ./allure-results ./allure-report
 #### ล้าง + รัน Tests ใหม่
 ```bash
 # ล้างข้อมูลเก่า → รัน tests → สร้าง report
-Remove-Item -Recurse -Force ./allure-results, ./allure-report -ErrorAction SilentlyContinue; npx playwright test; npx allure generate ./allure-results --clean; npx allure open allure-report
+Remove-Item -Recurse -Force ./allure-results, ./allure-report -ErrorAction SilentlyContinue; 
+npx playwright test; 
+npx allure generate ./allure-results --clean; 
+npx allure open allure-report
 ```
 
 ### 📁 โครงสร้างไฟล์ Allure
@@ -196,4 +200,3 @@ netstat -ano | findstr :PORT_NUMBER
 - 🔗 **Allure Report**: [View Latest Report](https://wapplekwork.github.io/sauce-demo-playwright/)
 - 📈 **Test History**: [View in GitHub Actions](https://github.com/wapplekwork/sauce-demo-playwright/actions)
 
-// ...existing code...
