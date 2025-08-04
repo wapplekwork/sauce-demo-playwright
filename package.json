@@ -1,25 +1,29 @@
 {
   "name": "sauce-demo-playwright",
   "version": "1.0.0",
-  "description": "sauce-demo-playwright",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test",
-    "test:report": "playwright test && npx allure generate allure-results --clean && npx allure open",
-    "allure:clear": "rm -rf allure-results allure-report",
-    "allure:generate": "npx allure generate allure-results --clean",
-    "allure:open": "npx allure open allure-report"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "tsx src/function_test.ts",
+    "dev": "tsx --watch src/function_test.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "lint:check": "eslint --print-config .eslintrc.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
   "devDependencies": {
+    "@eslint/js": "^9.32.0",
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.1.0",
-    "allure-playwright": "^3.3.2",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.32.0",
-    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-playwright": "^2.2.2",
-    "prettier": "^3.6.2"
+    "typescript": "^5.9.2"
   }
 }
