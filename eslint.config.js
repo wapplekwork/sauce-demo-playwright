@@ -36,7 +36,13 @@ module.exports = [
   {
     files: ['tests/**/*.ts'],
     rules: {
-      'no-console': 'off',
+      'no-console': 'off', // Allow console.log in test files
+    },
+  },
+  {
+    files: ['src/**/*.ts'],
+    rules: {
+      'no-console': 'off', // Allow console.log in src files
     },
   },
   {

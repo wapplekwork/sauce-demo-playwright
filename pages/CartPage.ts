@@ -37,5 +37,3 @@ export class CartPage {
     await this.continueShoppingButton.click();
   }
 }
-
-module.exports = { CartPage };

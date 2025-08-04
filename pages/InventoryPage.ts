@@ -33,7 +33,7 @@ export class InventoryPage {
     await this.addToCartButtons.first().click();
   }
 
-  async addItemToCartByName(itemName) {
+  async addItemToCartByName(itemName: string) {
     const item = this.page.locator(`[data-test="add-to-cart-${itemName.toLowerCase().replace(/ /g, '-')}"]`);
     await item.click();
   }
@@ -51,5 +51,3 @@ export class InventoryPage {
     await this.logoutLink.click();
   }
 }
-
-module.exports = { InventoryPage };
