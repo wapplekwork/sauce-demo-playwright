@@ -1,5 +1,9 @@
 name: Playwright Tests with Allure Report
-
+# Add permissions block at the top level
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 on:
   push:
     branches: [ main, develop ]
@@ -62,6 +66,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history
+        force_orphan: true  # เพิ่มบรรทัดนี้
     
     - name: Upload Playwright HTML Report
       uses: actions/upload-artifact@v4
