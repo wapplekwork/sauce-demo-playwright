@@ -1,5 +1,8 @@
-# sauce-demo-playwright
-sauce-demo-playwright
+##  sauce-demo-playwright
+
+## 📊 Test Reports
+- 🔗 **Allure Report**: [View Latest Report](https://wapplekwork.github.io/sauce-demo-playwright/)
+- 📈 **Test History**: [View in GitHub Actions](https://github.com/wapplekwork/sauce-demo-playwright/actions)
 
 # Install playwright
 - npm install
@@ -196,7 +199,5 @@ netstat -ano | findstr :PORT_NUMBER
 
 [![Playwright Tests](https://github.com/wapplekwork/sauce-demo-playwright/actions/workflows/playwright.yml/badge.svg)](https://github.com/wapplekwork/sauce-demo-playwright/actions/workflows/playwright.yml)
 
-## 📊 Test Reports
-- 🔗 **Allure Report**: [View Latest Report](https://wapplekwork.github.io/sauce-demo-playwright/)
-- 📈 **Test History**: [View in GitHub Actions](https://github.com/wapplekwork/sauce-demo-playwright/actions)
+
 
