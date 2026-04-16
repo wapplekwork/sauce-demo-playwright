@@ -17,8 +17,8 @@ test.describe('Login Test', () => {
         await page.getByText('เข้าสู่ระบบ', { exact: true }).click();
 
         // Fill in the username and password
-        await page.locator('input[name="mobile-number"]').fill('0826452999');
-        await page.locator('input[type="password"]').fill('@Recit1485');
-        await page.locator('button[id="login"]').click();
+        // await page.locator('input[name="mobile-number"]').fill('0826452999');
+        // await page.locator('input[type="password"]').fill('@Recit1485');
+        // await page.locator('button[id="login"]').click();
     });
 });

@@ -12,3 +12,5 @@ const a = 1;
 const b = 2;
 const c = calculate(a, b);
 console.log(`Sum of ${a} and ${b} is: ${c}`);
+
+
